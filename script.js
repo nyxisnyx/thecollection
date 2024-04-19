@@ -32,6 +32,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     for (let i=0; i<library.length; i++) {
         const container = createDiv("article", displayer, "", "book");
+        const bookcover = createDiv('img', container, '', '.bookcover');
+        const txtblock = createDiv('div', container, '', 'blocktxt');
+        const booktitle = createDiv('h2', txtblock, '', 'booktitle');
+        const bookauthor = createDiv('h3', txtblock, '', 'bookauthor');
+        const booksynopsis = createDiv('p', txtblock, '', 'booksynopsis');
+        const booktags = createDiv('p', txtblock, '', 'booktags');
+        const tagname = createDiv('p', booktags, '', 'tagname');
+        const bookinfo = createDiv('div', txtblock, '', 'bookinfo');
+        const bookrelease = createDiv('p', bookinfo, '', 'bookrelease');
+        const booklink = createDiv('a', bookinfo, '', 'booklink');
+        const goodreadslogo = createDiv('img', booklink, '', 'goodreadslogo');
+        const bookpublisher = createDiv('p', bookinfo, '', 'bookpublisher');
     }
 }
 )
