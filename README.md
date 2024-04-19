@@ -1,3 +1,7 @@
-Background image by Pavel Danilyuk: https://www.pexels.com/fr-fr/photo/bleu-peinture-abstrait-colore-8381923/
+# Julie's Delightful TBR
+This personal project allows me to have a visual representation of all the books I physically own and have yet to read. A JSon feeds it its data, and there's a second JSon with an empty model I can simply copy and paste in order to add new books.
 
-Reset by Josh W. Comeau: https://www.joshwcomeau.com/css/custom-css-reset/
+
+## Acknowledgements
+→ Beau Regular (font) by sebgarrydesign
+→ Reset by Josh W. Comeau: https://www.joshwcomeau.com/css/custom-css-reset/
