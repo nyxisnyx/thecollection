@@ -1,0 +1,345 @@
+// RESET
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+//COLORS
+$darkpurple: #68526C;
+$lightpurple: #CEBFD7;
+$satorange: #F9B4A5;
+$lightorange: #FEF0D1;
+$whitish: #fdfdfd;
+$sheerwhitish: #fdfdfd77;
+$charcoal: #292929;
+
+//TAGS
+$romance: #CA8EA1;
+$fantasy: #FCDBC0;
+$youngadult: #c6fcc0;
+$mythology:#c0d7fc;
+$adult: #c0fcf5;
+$historical: #fafcc0;
+$adventure: #c0fccc;
+$paranormal: #c0c2fc;
+$retelling: #d7c0fc;
+$mystery: #eec0fc;
+$gothic: #fcc0ec;
+$urban: #bd9da0;
+$queer: #a89dbd;
+$cozy: #a0bd9d;
+$epic: #9db2bd;
+
+
+
+//FONT
+$beau: 'beauregular';
+
+@font-face {
+    font-family: 'beauregular';
+    src: url('font/beauregular-0nlo-webfont.woff2') format('woff2'),
+         url('font/beauregular-0nlo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  body {
+    width: 100vw;
+    height: 100vw;
+    background-color: $lightpurple;
+    padding:1rem;
+
+    header {
+        .titlebox {
+            padding: 1rem;
+            width:80%;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:1rem;
+            margin-bottom: 1rem;
+            border: 3px solid #fdfdfd;
+            background-color:#fdfdfd77;
+            
+            h1{
+                color:$darkpurple;
+                text-align:center;
+            }
+        }
+    }
+
+    main {
+        .display {
+            display:grid;
+            column-gap:1rem;
+            row-gap:1rem;
+            margin-block-start:1rem;
+            margin-block-end:5rem;
+            width:80%;
+            margin-left:auto;
+            margin-right:auto;
+
+            @media only screen and (max-width: 600px) {
+                grid-template-columns: 1fr;
+            }
+
+            @media only screen and (min-width: 600px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media only screen and (min-width: 768px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            @media only screen and (min-width: 992px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            .book {
+                border: 2px solid $darkpurple;
+                background-color: $sheerwhitish;
+                padding: 1rem;
+                font-family: $beau;
+
+                .sectioncover {
+                    padding: 0.5rem;
+                    border: 1px solid $satorange;
+                    background-color: $whitish;
+
+                    .bookcover {
+                        object-fit:cover;
+                    }
+                }
+
+                .blocktxt {
+                    .booktitle {
+                        text-align:center;
+                        color:$charcoal;
+                        font-size:2rem;
+                        font-weight: lighter;
+                        height:7rem;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        line-height: 2.1rem;
+                    }
+
+                    .bookauthor {
+                        text-align:center;
+                        font-size:1rem;
+                        color:$darkpurple;
+                        font-style:italic;
+                        font-weight: lighter;
+                    }
+
+                    .booksynopsis {
+                        border: 1px solid $satorange;
+                        background-color:$whitish;
+                        text-align:justify;
+                        padding:0.5rem;
+                        color:$charcoal;
+
+                        @media only screen and (min-width: 600px) {
+                            max-height: 20rem;
+                            overflow-y: scroll;
+                        }
+                    }
+
+                    .booktags {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content:space-evenly;
+                        align-items: center;
+                        height:5rem;
+
+                        .fantasy {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$fantasy;
+                        }
+
+                        .romance {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$romance;
+                        }
+
+                        .young_adult {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$youngadult;
+                        }
+
+                        .mythology {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$mythology;
+                        }
+
+                        .adult {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$adult;
+                        }
+
+                        .historical_fiction {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$historical;
+                        }
+
+                        .adventure {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$adventure;
+                        }
+
+                        .paranormal {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$paranormal;
+                        }
+
+                        .retelling {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$retelling;
+                        }
+
+                        .mystery {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$mystery;
+                        }
+
+                        .gothic {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$gothic;
+                        }
+
+                        .urban_fantasy {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$urban;
+                        }
+
+                        .LGBTQ {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$queer;
+                        }
+
+                        .cozy_mystery {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$cozy;
+                        }
+
+                        .epic_fantasy {
+                            margin:0.2rem;
+                            padding:0.2rem;
+                            border: 1px solid $charcoal;
+                            color: $charcoal;
+                            background-color:$epic;
+                        }
+                    }
+
+                  .bookinfo {
+                    display:flex;
+                    justify-content:space-evenly;
+                    align-items:center;
+                    margin-top:1rem;
+
+                    .bookrelease {
+                        font-size:1rem;
+                        color:$darkpurple;
+                        text-align:center;
+                    }
+                    
+                    .goodreadslogo {
+                        height:0.7rem;
+                        width:0.7rem;
+                        filter: invert(33%) sepia(8%) saturate(1675%) hue-rotate(244deg) brightness(92%) contrast(81%);
+                    }
+
+                    .bookpublisher {
+                        font-size:1rem;
+                        color:$darkpurple;
+                        text-align:center;
+                    }
+                  }  
+                }
+            }
+        }
+    }
+  }

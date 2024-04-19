@@ -21,7 +21,9 @@ fetch('library.json').then((response) => response.json()).then((library) => {
     for (let i=0; i<library.length; i++) {
         const container = createDiv("article", displayer, "", "book");
 
-        const bookcover = createDiv('img', container, '', '.bookcover');
+        const sectioncover = createDiv('div', container, '', 'sectioncover');
+
+        const bookcover = createDiv('img', sectioncover, '', 'bookcover');
             bookcover.setAttribute('src', library[i].cover);
             bookcover.setAttribute('alt', library[i].alt);
 

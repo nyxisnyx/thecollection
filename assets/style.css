@@ -1,1 +1,289 @@
-/*# sourceMappingURL=style.css.map */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: "beauregular";
+  src: url("font/beauregular-0nlo-webfont.woff2") format("woff2"), url("font/beauregular-0nlo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  width: 100vw;
+  height: 100vw;
+  background-color: #CEBFD7;
+  padding: 1rem;
+}
+body header .titlebox {
+  padding: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 3px solid #fdfdfd;
+  background-color: rgba(253, 253, 253, 0.4666666667);
+}
+body header .titlebox h1 {
+  color: #68526C;
+  text-align: center;
+}
+body main .display {
+  display: grid;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  row-gap: 1rem;
+  margin-block-start: 1rem;
+  margin-block-end: 5rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 600px) {
+  body main .display {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 600px) {
+  body main .display {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body main .display {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body main .display {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+body main .display .book {
+  border: 2px solid #68526C;
+  background-color: rgba(253, 253, 253, 0.4666666667);
+  padding: 1rem;
+  font-family: "beauregular";
+}
+body main .display .book .sectioncover {
+  padding: 0.5rem;
+  border: 1px solid #F9B4A5;
+  background-color: #fdfdfd;
+}
+body main .display .book .sectioncover .bookcover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .display .book .blocktxt .booktitle {
+  text-align: center;
+  color: #292929;
+  font-size: 2rem;
+  font-weight: lighter;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.1rem;
+}
+body main .display .book .blocktxt .bookauthor {
+  text-align: center;
+  font-size: 1rem;
+  color: #68526C;
+  font-style: italic;
+  font-weight: lighter;
+}
+body main .display .book .blocktxt .booksynopsis {
+  border: 1px solid #F9B4A5;
+  background-color: #fdfdfd;
+  text-align: justify;
+  padding: 0.5rem;
+  color: #292929;
+}
+@media only screen and (min-width: 600px) {
+  body main .display .book .blocktxt .booksynopsis {
+    max-height: 20rem;
+    overflow-y: scroll;
+  }
+}
+body main .display .book .blocktxt .booktags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 5rem;
+}
+body main .display .book .blocktxt .booktags .fantasy {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #FCDBC0;
+}
+body main .display .book .blocktxt .booktags .romance {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #CA8EA1;
+}
+body main .display .book .blocktxt .booktags .young_adult {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #c6fcc0;
+}
+body main .display .book .blocktxt .booktags .mythology {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #c0d7fc;
+}
+body main .display .book .blocktxt .booktags .adult {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #c0fcf5;
+}
+body main .display .book .blocktxt .booktags .historical_fiction {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #fafcc0;
+}
+body main .display .book .blocktxt .booktags .adventure {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #c0fccc;
+}
+body main .display .book .blocktxt .booktags .paranormal {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #c0c2fc;
+}
+body main .display .book .blocktxt .booktags .retelling {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #d7c0fc;
+}
+body main .display .book .blocktxt .booktags .mystery {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #eec0fc;
+}
+body main .display .book .blocktxt .booktags .gothic {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #fcc0ec;
+}
+body main .display .book .blocktxt .booktags .urban_fantasy {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #bd9da0;
+}
+body main .display .book .blocktxt .booktags .LGBTQ {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #a89dbd;
+}
+body main .display .book .blocktxt .booktags .cozy_mystery {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #a0bd9d;
+}
+body main .display .book .blocktxt .booktags .epic_fantasy {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid #292929;
+  color: #292929;
+  background-color: #9db2bd;
+}
+body main .display .book .blocktxt .bookinfo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+body main .display .book .blocktxt .bookinfo .bookrelease {
+  font-size: 1rem;
+  color: #68526C;
+  text-align: center;
+}
+body main .display .book .blocktxt .bookinfo .goodreadslogo {
+  height: 0.7rem;
+  width: 0.7rem;
+  filter: invert(33%) sepia(8%) saturate(1675%) hue-rotate(244deg) brightness(92%) contrast(81%);
+}
+body main .display .book .blocktxt .bookinfo .bookpublisher {
+  font-size: 1rem;
+  color: #68526C;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
