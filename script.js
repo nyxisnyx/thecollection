@@ -24,24 +24,26 @@ fetch('library.json').then((response) => response.json()).then((library) => {
             bookcover.setAttribute('src', library[i].cover);
             bookcover.setAttribute('alt', library[i].alt)
         const txtblock = createDiv('div', container, '', 'blocktxt');
-        const booktitle = createDiv('h2', txtblock, '', 'booktitle');
-            booktitle.innerHTML = library[i].title;
-        const bookauthor = createDiv('h3', txtblock, '', 'bookauthor');
-            bookauthor.innerHTML = library[i].author;
-        const booksynopsis = createDiv('p', txtblock, '', 'booksynopsis');
-            booksynopsis.innerHTML = library[i].synopsis;
+        const booktitle = createDiv('h2', txtblock, library[i].title, 'booktitle');
+            // booktitle.innerHTML = library[i].title;
+        const bookauthor = createDiv('h3', txtblock, library[i].author, 'bookauthor');
+            // bookauthor.innerHTML = library[i].author;
+        const booksynopsis = createDiv('p', txtblock, library[i].synopsis, 'booksynopsis');
+            // booksynopsis.innerHTML = library[i].synopsis;
         const booktags = createDiv('p', txtblock, '', 'booktags');
-            booktags.innerHTML = library[i].tags
-        const tagname = createDiv('p', booktags, '', 'tagname');
+            // booktags.innerHTML = library[i].tags
+            for (b = 0; b > library[i].tags.length; b++) {
+                const tagname = createDiv('p', booktags, '', 'tagname');
+            }
         const bookinfo = createDiv('div', txtblock, '', 'bookinfo');
-        const bookrelease = createDiv('p', bookinfo, '', 'bookrelease');
-            bookrelease.innerHTML = library[i].release;
+        const bookrelease = createDiv('p', bookinfo, library[i].release, 'bookrelease');
+            // bookrelease.innerHTML = library[i].release;
         const booklink = createDiv('a', bookinfo, '', 'booklink');
             booklink.setAttribute('src', library[i].goodreads);
         const goodreadslogo = createDiv('img', booklink, '', 'goodreadslogo');
             goodreadslogo.setAttribute('src', 'assets/goodreadslogo.png');
             goodreadslogo.setAttribute('alt', 'the goodreads logo');
-        const bookpublisher = createDiv('p', bookinfo, '', 'bookpublisher');
-            bookpublisher.innerHTML = library[i].publisher;
+        const bookpublisher = createDiv('p', bookinfo, library[i].publisher, 'bookpublisher');
+            // bookpublisher.innerHTML = library[i].publisher;
     }
 })
