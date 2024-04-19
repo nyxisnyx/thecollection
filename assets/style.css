@@ -159,7 +159,7 @@ body main .display .book .blocktxt .booktags {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  height: 5rem;
+  height: 7rem;
 }
 body main .display .book .blocktxt .booktags .fantasy {
   margin: 0.2rem;
