@@ -46,7 +46,7 @@
     {
         "title": "Belladonna",
         "author": "Adalyn Grace",
-        "cover": "assets/bookcovers/bella.ong",
+        "cover": "assets/bookcovers/bella.png",
         "alt": "book cover for Belladonna",
         "release": "Aug 30, 2022",
         "publisher": "Little, Brown and Company",
@@ -123,7 +123,7 @@
     {
         "title": "The City of Brass",
         "author": "S.A. Chakraborty",
-        "cover": "assets/bookcovers/city.jpg",
+        "cover": "assets/bookcovers/brass.jpg",
         "alt": "book cover for The City of Brass",
         "release": "Nov 14, 2017",
         "publisher": "Harper Voyager",
