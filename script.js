@@ -34,8 +34,8 @@ fetch('library.json').then((response) => response.json()).then((library) => {
         const booksynopsis = createDiv('p', txtblock, library[i].synopsis, 'booksynopsis');
 
         const booktags = createDiv('p', txtblock, '', 'booktags');
-            for (b = 0; b > library[i].tags.length; b++) {
-                const tagname = createDiv('p', booktags, library[i].tags[b], `${library[i].tags[b]}`);
+            for (b = 0; b < library[i].tags.length; b++) {
+                const tagname = createDiv('p', booktags, library[i].tags[b], `${library[i].tags[b].replace(" ", "_")}`);
             }
         const bookinfo = createDiv('div', txtblock, '', 'bookinfo');
         const bookrelease = createDiv('p', bookinfo, library[i].release, 'bookrelease');
