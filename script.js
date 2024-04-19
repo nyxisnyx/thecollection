@@ -20,30 +20,30 @@ fetch('library.json').then((response) => response.json()).then((library) => {
 
     for (let i=0; i<library.length; i++) {
         const container = createDiv("article", displayer, "", "book");
+
         const bookcover = createDiv('img', container, '', '.bookcover');
             bookcover.setAttribute('src', library[i].cover);
-            bookcover.setAttribute('alt', library[i].alt)
+            bookcover.setAttribute('alt', library[i].alt);
+
         const txtblock = createDiv('div', container, '', 'blocktxt');
+
         const booktitle = createDiv('h2', txtblock, library[i].title, 'booktitle');
-            // booktitle.innerHTML = library[i].title;
+
         const bookauthor = createDiv('h3', txtblock, library[i].author, 'bookauthor');
-            // bookauthor.innerHTML = library[i].author;
+
         const booksynopsis = createDiv('p', txtblock, library[i].synopsis, 'booksynopsis');
-            // booksynopsis.innerHTML = library[i].synopsis;
+
         const booktags = createDiv('p', txtblock, '', 'booktags');
-            // booktags.innerHTML = library[i].tags
             for (b = 0; b > library[i].tags.length; b++) {
-                const tagname = createDiv('p', booktags, '', 'tagname');
+                const tagname = createDiv('p', booktags, library[i].tags[b], `${library[i].tags[b]}`);
             }
         const bookinfo = createDiv('div', txtblock, '', 'bookinfo');
         const bookrelease = createDiv('p', bookinfo, library[i].release, 'bookrelease');
-            // bookrelease.innerHTML = library[i].release;
         const booklink = createDiv('a', bookinfo, '', 'booklink');
             booklink.setAttribute('src', library[i].goodreads);
         const goodreadslogo = createDiv('img', booklink, '', 'goodreadslogo');
             goodreadslogo.setAttribute('src', 'assets/goodreadslogo.png');
             goodreadslogo.setAttribute('alt', 'the goodreads logo');
         const bookpublisher = createDiv('p', bookinfo, library[i].publisher, 'bookpublisher');
-            // bookpublisher.innerHTML = library[i].publisher;
     }
 })
